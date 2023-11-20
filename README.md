@@ -1,3 +1,7 @@
 # Desktop_Friend
-Used Pycharm CE
-pip3 install
+#Used Pycharm CE
+
+#Used pip3 installer
+#Some basic functions like opening predefined webpages and telling time
+
+
