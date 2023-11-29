@@ -5,14 +5,14 @@ import datetime
 
 
 def say(text: object) -> object:
-    # os.system(f"say {text}")
+
     os.system(f"say -v Karen {text}")
 
 
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Listening...")
+        print("Bol...")
         r.pause_threshold = 1
         try:
             audio = r.listen(source, timeout=4)  # Adjust the timeout as needed
@@ -24,8 +24,8 @@ def takeCommand():
 
 
 if __name__ == '__main__':
-    print('AI is Active')
-    say("Hello I am Aditi Your Personal Assistant")
+    print('Aditi is Active')
+    say("Hi Shoaib I am Aditi , Your Buddy")
     while True:
         print("You can Speak")
         query = takeCommand()
@@ -40,3 +40,13 @@ if __name__ == '__main__':
             hour = datetime.datetime.now().strftime("%H")
             minute = datetime.datetime.now().strftime("%M")
             say(f"Sir the time is {hour} hour and {minute} minutes")
+
+        if "Thank".lower() in query.lower():
+            say(f"Anything for my Buddy")
+
+        if "Bye".lower() in query.lower():
+            say(f"Bye Shoaib")
+            exit()
+
+        if "Thank".lower() in query.lower():
+            say(f"Anything for my Buddy")
