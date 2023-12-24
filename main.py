@@ -12,7 +12,7 @@ def say(text: object) -> object:
 def takeCommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
-        print("Bol...")
+        print("Say...")
         r.pause_threshold = 1
         try:
             audio = r.listen(source, timeout=4)  # Adjust the timeout as needed
@@ -48,5 +48,4 @@ if __name__ == '__main__':
             say(f"Bye Shoaib")
             exit()
 
-        if "Thank".lower() in query.lower():
-            say(f"Anything for my Buddy")
+
